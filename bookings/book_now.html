@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservation</title>
-    <link rel="stylesheet" href="book_now.css">
+    <title>Reservation - SNK Premier</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="/assets/css/book_now.css">
 </head>
-
 <body>
     <header id="header">
         <div class="contact">
@@ -20,7 +17,7 @@
         </div>
         <div class="main-header">
             <div class="mail">
-                <p><i class="fa-solid fa-envelope"></i> shahnawazgull2166@gmail.com</p>
+                <p><i class="fa-solid fa-envelope"></i> snkpremier@gmail.com</p>
             </div>
             <div class="social-links">
                 <i class="fa-brands fa-facebook"></i>
@@ -29,59 +26,93 @@
             </div>
         </div>
     </header>
-    <div class="whatsapp">
-        <div class="arrow">
-            <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-        <i class="fa-brands fa-whatsapp"></i>
 
-    </div>
     <div class="nav-bar">
         <ul>
-
-            <a href="index.html"><img src="snkp.jpeg" alt=""></a>
-            <li><a href="">Home</a></li>
+            <a href="/"><img src="/assets/images/snkp.jpeg" alt="SNK Premier Logo"></a>
+            <li><a href="">Dallas</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Our Services</a></li>
-            <li><a href="car_list.html">Car List</a></li>
+            <li><a href="car-lists/car_list.html">Car List</a></li>
             <li><a href="">Faq</a></li>
             <li><a href="">Contact Us</a></li>
             <li><a href="">Terms & Conditions</a></li>
-            <li><a href="book_now.html" class="button">Book Now</a></li>
-            <li></li>
+            <li><a href="bookings/book_now.html" class="button">Book Now</a></li>
         </ul>
     </div>
 
-
-    <!-- Form div starts here -->
-    <div class="form">
-        <form action="">
-            <h1>Car Rental Application Form</h1>
-            <div class="span">
-                <label for="firstname">First Name</label>
-                <input type="text" name="firstname" id="firstname" required>
-                <label for="lastname">Last Name</label>
-                <input type="text" name="lastname" id="lastname">
-            </div>
-            <label for="">Contact</label>
-            <input type="text" name="contact" id="contact">
-            <label for="car-name">Car Details</label>
-            <input type="text" name="car-name" id="car-name">
-            <label for="from">From</label>
-            <input type="date" name="from" id="from">
-            <label for="to">To</label>
-            <input type="date" name="to" id="to">
-            <button type="submit">Register</button>
-        </form>
+    <div class="whatsapp">
+        <div class="arrow">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <a href="https://wa.me/11234567890" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </div>
-    <!-- Footer Start from Here -->
+
+    <div class="form-container">
+        <div class="form-wrapper">
+            <form id="booking-form">
+                <h1>Book Your Luxury Ride</h1>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstname">First Name *</label>
+                        <input type="text" id="firstname" name="firstname" required placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name *</label>
+                        <input type="text" id="lastname" name="lastname" required placeholder="Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number *</label>
+                        <input type="tel" id="contact" name="contact" required placeholder="+92 300 1234567" >
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-name">Select Car *</label>
+                        <select id="car-name" name="car-name" required>
+                            <option value="">Choose a car</option>
+                            <option value="stretch-limousine">Stretch Limousine - $190/day</option>
+                            <option value="mercedes-sedan">Mercedes Grand Sedan - $190/day</option>
+                            <option value="bmw-7">BMW 7 Series - $220/day</option>
+                            <option value="audi-a8">Audi A8 L - $210/day</option>
+                            <option value="rolls-royce">Rolls Royce Phantom - $450/day</option>
+                            <option value="bentley">Bentley Continental - $400/day</option>
+                            <option value="cadillac">Cadillac Escalade - $250/day</option>
+                            <option value="lincoln">Lincoln Navigator - $230/day</option>
+                            <option value="tesla">Tesla Model X - $280/day</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="from">Pick-up Date *</label>
+                        <input type="date" id="from" name="from" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to">Return Date *</label>
+                        <input type="date" id="to" name="to" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Pick-up Location *</label>
+                        <input type="text" id="location" name="location" required placeholder="Enter city or address">
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <p><i class="fa-solid fa-info-circle"></i> All fields marked with * are required</p>
+                    <button type="submit">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-container">
             <div class="img-div">
-                <img src="snkp.jpeg" alt="">
+                <a href="/"><img src="/assets/images/snkp.jpeg" alt="SNK Premier Logo"></a>
                 <div class="footer-text">
-                    <p>SNK Premier is a luxurious car service in Texas, USA. We provide the classic and most comfortable
-                        rides of life to make your special events more remarkable.</p>
+                    <p>SNK Premier is a luxurious car service in Texas, USA. We provide the classic and most comfortable rides to make your special events remarkable.</p>
                 </div>
             </div>
             <div class="footer-address-div">
@@ -89,12 +120,12 @@
                 <div class="sub-add">
                     <p><i class="fa-solid fa-location-dot"></i> 47 W 13th St, New York, NY 10011, USA</p>
                     <p><i class="fa-solid fa-phone-volume"></i> +92(300) 333-3333</p>
-                    <p><i class="fa-solid fa-envelope"></i> shahnawazgull2166@gmail.com</p>
+                    <p><i class="fa-solid fa-envelope"></i> snkpremier@gmail.com</p>
                 </div>
             </div>
             <div class="quick-text">
                 <h1>Quick Links</h1>
-                <li><a href="carrentals.html">Home</a></li>
+                <li><a href="">Home</a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Our Services</a></li>
                 <li><a href="">Car List</a></li>
@@ -110,10 +141,26 @@
             </div>
         </div>
         <div class="copy">
-            <p>Copyright @ 2024 All rights reserved</p>
+            <p>Copyright © 2025 All rights reserved</p>
         </div>
-
     </footer>
-</body>
 
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Booking submitted successfully! We will contact you shortly to confirm your reservation.');
+            this.reset();
+        });
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('from').setAttribute('min', today);
+        document.getElementById('to').setAttribute('min', today);
+
+        // Ensure return date is after pickup date
+        document.getElementById('from').addEventListener('change', function() {
+            document.getElementById('to').setAttribute('min', this.value);
+        });
+    </script>
+</body>
 </html>

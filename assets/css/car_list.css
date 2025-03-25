@@ -28,6 +28,7 @@ body {
     border-radius: 20px;
     cursor: pointer;
     margin-bottom: 10px;
+    color: white;
 }
 
 .arrow a i {
@@ -300,4 +301,116 @@ footer img {
 
 .sub-add p:hover {
     color: #eda617;
+}
+
+/* Previous CSS remains mostly unchanged, adding new styles below */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 5rem 1rem;
+}
+
+.cars-div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.cars-div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cars-div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cars-div:hover img {
+    transform: scale(1.05);
+}
+
+.car-desc {
+    font-family: 'Libre Bodoni', serif;
+    padding: 15px;
+}
+
+.car-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.car-text h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.car-text span {
+    color: #eda617;
+    font-weight: bold;
+}
+
+.booking-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rating {
+    color: #eda617;
+    font-size: 0.9rem;
+}
+
+.rating i {
+    margin-right: 2px;
+}
+
+.anchor a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    background-color: #eda617;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all ease 0.2s;
+    font-size: 0.9rem;
+}
+
+.anchor a:hover {
+    background-color: #b67c08;
+    transform: scale(1.05);
+}
+
+/* Animation for grid items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cars-div {
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: calc(var(--order) * 0.1s);
 }
