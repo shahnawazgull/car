@@ -10,6 +10,7 @@ body {
     background-color: #f5f5f5;
     line-height: 1.6;
 }
+
 /* Header Styles */
 header {
     display: flex;
@@ -59,7 +60,7 @@ header p:hover {
     top: 48px;
     z-index: 999;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-bar ul {
@@ -140,7 +141,7 @@ header p:hover {
     padding: 2rem;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-out;
 }
 
@@ -235,7 +236,9 @@ footer img {
     transition: color 0.3s ease;
 }
 
-.sub-add p:hover, .quick-text a:hover, .footer-social-links i:hover {
+.sub-add p:hover,
+.quick-text a:hover,
+.footer-social-links i:hover {
     color: #eda617;
 }
 
@@ -249,13 +252,29 @@ footer img {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .main-header { gap: 2rem; }
-    .nav-bar li { margin: 0 1rem; }
-    .terms-container { margin: 5rem 1rem 2rem; padding: 1.5rem; }
+    .main-header {
+        gap: 2rem;
+    }
+
+    .nav-bar li {
+        margin: 0 1rem;
+    }
+
+    .terms-container {
+        margin: 5rem 1rem 2rem;
+        padding: 1.5rem;
+    }
 }
